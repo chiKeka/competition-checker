@@ -92,6 +92,17 @@ Quantify the commitment cost vs. potential return for this specific founder. Sti
 
 Present as a table. Do not compute a single "worth it" score. The founder does that math.
 
+### 6d. Negotiation context
+Surface factual context that helps the founder understand which terms are standard vs. unusual, without prescribing action:
+
+- **Boilerplate vs. bespoke**: if a clause uses standard legal template language (common across many competitions), note it as "standard template language." If a clause is unusually specific or custom-drafted, note it as "bespoke to this competition." This helps the founder understand which terms were intentionally chosen vs. inherited from a template.
+- **Landscape comparison**: where possible, note how the clause compares to what competitions of comparable scale typically include. Use neutral factual framing: "Competitions of comparable scale typically include a background IP carve-out" — not "you should ask for a carve-out."
+- **Known modification patterns**: if the community signal scan (or publicly available sources) surfaces instances of founders successfully negotiating specific terms with this organizer or similar competitions, cite them with sources. "Past participants in [Competition X] have publicly reported negotiating the IP license scope from perpetual to 3-year ([source])."
+
+This section respects the neutrality rule. It does not say "negotiate this." It says "here is what the landscape looks like." The founder decides whether and what to push on.
+
+Place this in a dedicated `## Negotiation context` section in the report, after Unusual clauses and before Fit Analysis.
+
 ### 7. Save outputs
 Create `./competition-reports/` in the user's current working directory if it doesn't exist, plus `./competition-reports/history/` and `./competition-reports/cache/` subfolders.
 
@@ -149,12 +160,27 @@ Both fingerprint fields are computed via `scripts/fingerprint.py` — never hand
           "source_type": "primary",
           "descriptor": "optional neutral structural note"
         }
+      ],
+      "omissions": [
+        "No background IP carve-out identified",
+        "License duration not specified"
       ]
     }
   ],
   "unusual_clauses": [
     { "quote": "...", "location": "...", "descriptor": "..." }
   ],
+  "negotiation_context": {
+    "boilerplate_clauses": ["IP license clause uses standard template language"],
+    "bespoke_clauses": ["Data access clause is specific to this competition's platform"],
+    "landscape_notes": ["Competitions of comparable scale typically include a background IP carve-out"],
+    "known_modifications": [
+      {
+        "note": "Past participants have publicly reported negotiating IP license scope",
+        "source": "https://..."
+      }
+    ]
+  },
   "community_signal": {
     "applicable": true,
     "themes": [

@@ -74,6 +74,16 @@ Scores with partial coverage show a `?` suffix (e.g., `7?`). See the findings se
 
 - (same pattern)
 
+Within each dimension's findings, after the quoted clauses, include an omissions sub-section if any expected clauses were absent:
+
+```
+**Not addressed in these T&Cs:**
+- No background IP carve-out identified
+- License duration not specified (defaults to perpetual absent explicit limitation)
+```
+
+If the Equity & Financial dimension detects investment-as-prize terms, include the investment-term detail table per the sub-rubric in `RUBRIC.md`.
+
 ---
 
 ## Unusual clauses
@@ -84,6 +94,25 @@ Clauses that do not fit the 7 dimensions but stand out.
   `[{{LOCATION}}]` — {{NEUTRAL_DESCRIPTOR}}
 
 (Omit this section entirely if empty. Do not write "none found" — just leave the section out.)
+
+---
+
+## Negotiation context
+
+*Factual landscape context. Not advice. Not a negotiation strategy.*
+
+### Boilerplate vs. bespoke
+- **Standard template language**: {{LIST_OF_BOILERPLATE_CLAUSES}}
+- **Bespoke to this competition**: {{LIST_OF_BESPOKE_CLAUSES}}
+
+### Landscape comparison
+- {{NEUTRAL_FACTUAL_COMPARISON}} (e.g., "Competitions of comparable scale typically include a background IP carve-out; these T&Cs do not.")
+
+### Known modification patterns
+- > "{{VERBATIM_REPORT_OF_NEGOTIATION}}"
+  — {{SOURCE}}, [{{URL}}]({{URL}})
+
+(Omit the Known modification patterns sub-section if no public reports of negotiation were found. Omit the entire Negotiation context section only if no useful context could be determined for any sub-section.)
 
 ---
 

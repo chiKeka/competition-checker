@@ -26,6 +26,13 @@ For each dimension: **signals** (what to scan for), **anchors** (what different 
 ### Neutral descriptors
 "perpetual," "worldwide," "royalty-free," "sublicensable," "irrevocable," "covers derivatives," "no background IP carve-out," "assignment (not license)," "survives termination"
 
+### Expected clauses (flag if absent)
+- Background IP carve-out (entrant's pre-existing IP excluded from license)
+- License scope limitation (what specifically is licensed — submission only, or broader)
+- License duration (perpetual by default if silent — flag the silence)
+- Post-competition IP reversion or termination of license rights
+- Restriction on sponsor building competing products from submissions
+
 ---
 
 ## 2. Equity & Financial — `equity_financial`
@@ -49,6 +56,31 @@ For each dimension: **signals** (what to scan for), **anchors** (what different 
 ### Neutral descriptors
 "mandatory equity grant," "ROFR with no sunset," "MFN applies," "fee-to-enter of $X," "prize contingent on investment acceptance"
 
+### Expected clauses (flag if absent)
+- Equity percentage or cap specified before entry
+- Investment instrument type (SAFE, convertible note, priced round)
+- Valuation cap or discount rate stated
+- Clear separation between prize and investment (are they contingent on each other?)
+
+### Investment-term sub-rubric (activate when investment terms are detected)
+
+When the competition offers investment as a prize or condition, surface these details in a dedicated sub-section under Equity & Financial. If any detail is absent, flag the absence explicitly — "investment terms to be negotiated post-selection" means the founder has no visibility into dilution at the time of entry.
+
+| Term | What to surface |
+|------|----------------|
+| Instrument type | SAFE (pre-money / post-money), convertible note, priced equity, or unspecified |
+| Valuation cap | Stated cap, uncapped, or not specified |
+| Discount rate | Percentage, or not specified |
+| Pro-rata rights | Present, absent, or not specified |
+| MFN clause | Whether the investor gets most-favored-nation terms on future rounds |
+| Information rights | Board observer seat, financial reporting requirements, or not specified |
+| Side letters | Any non-standard terms attached to the investment |
+| Anti-dilution | Broad-based weighted average, full ratchet, or not specified |
+| Equity percentage | Fixed percentage, negotiable range, or "to be determined" |
+| Investment contingencies | Due diligence, incorporation requirements, ongoing obligations |
+
+**Scoring impact**: when investment is the prize and terms are not pre-defined, this adds +1–2 to the dimension score. The founder is being asked to compete for an offer whose terms they cannot evaluate until after winning. Note this in the headline.
+
 ---
 
 ## 3. Exclusivity & Restraint — `exclusivity`
@@ -69,6 +101,11 @@ For each dimension: **signals** (what to scan for), **anchors** (what different 
 
 ### Neutral descriptors
 "fundraise freeze for N months," "no parallel competitions," "post-competition non-compete of N months," "exclusive advisory relationship"
+
+### Expected clauses (flag if absent)
+- Explicit statement that entrant may pursue parallel opportunities
+- Time-bounded exclusivity window (if any exclusivity exists)
+- Right to withdraw without penalty during the competition period
 
 ---
 
@@ -92,6 +129,12 @@ For each dimension: **signals** (what to scan for), **anchors** (what different 
 ### Neutral descriptors
 "perpetual publicity rights," "unilateral press release right," "pitch recording owned by sponsor," "data shared with unnamed third parties," "no media opt-out"
 
+### Expected clauses (flag if absent)
+- Data deletion or return clause post-competition
+- Opt-out mechanism for ongoing publicity use
+- Named list of third parties who receive data (vs. unnamed "partners")
+- Duration limit on publicity rights
+
 ---
 
 ## 5. Commitment Cost — `commitment_cost`
@@ -113,6 +156,11 @@ For each dimension: **signals** (what to scan for), **anchors** (what different 
 
 ### Neutral descriptors
 "N-week in-person residency," "quarterly reports required for N years," "entrant-funded travel," "relocation required," "no reimbursement specified"
+
+### Expected clauses (flag if absent)
+- Withdrawal/exit clause (can the entrant leave mid-competition without penalty?)
+- Cost allocation specifics (who pays for what)
+- Post-competition obligation duration (is it bounded or open-ended?)
 
 ---
 
@@ -137,6 +185,13 @@ For each dimension: **signals** (what to scan for), **anchors** (what different 
 ### Neutral descriptors
 "governing law: [jurisdiction]," "mandatory arbitration in [location]," "one-way indemnity," "uncapped entrant liability," "sponsor may modify terms without notice"
 
+### Expected clauses (flag if absent)
+- Liability cap on entrant's exposure
+- Mutual (not one-way) indemnification
+- Notice period before sponsor can modify terms
+- Grounds for disqualification (vs. "sole discretion" with no criteria)
+- Dispute resolution mechanism
+
 ---
 
 ## 7. Prize Mechanics — `prize_mechanics`
@@ -158,6 +213,35 @@ For each dimension: **signals** (what to scan for), **anchors** (what different 
 
 ### Neutral descriptors
 "milestone-contingent release," "clawback on [event]," "prize form: sponsor credits expiring in N days," "tax treatment not specified," "release at sponsor's sole discretion"
+
+### Expected clauses (flag if absent)
+- Tax treatment (who is responsible, is withholding addressed)
+- Payment timeline (when is the prize disbursed)
+- Prize value in cash-equivalent terms (for non-cash prizes like credits)
+- Conditions for prize forfeiture clearly enumerated
+- Credit/service prize expiration date and transferability
+
+---
+
+## Omission detection
+
+For each dimension, check the "Expected clauses" list above. When an expected clause is absent from the T&Cs, surface it in the report under a dedicated **"Not addressed"** sub-section within that dimension's findings. This is not about inflating the score — silence in legal documents defaults to the drafter's advantage. Flagging omissions gives the founder a checklist of questions to ask the organizer before signing.
+
+Format in the report:
+```
+**Not addressed in these T&Cs:**
+- No background IP carve-out identified
+- License duration not specified (defaults to perpetual absent explicit limitation)
+- No data deletion clause post-competition
+```
+
+In the JSON sidecar, omissions go in a sibling array to `findings`:
+```json
+"omissions": [
+  "No background IP carve-out identified",
+  "License duration not specified"
+]
+```
 
 ---
 
