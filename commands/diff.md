@@ -19,6 +19,6 @@ Steps:
    - **Reworded clauses**: old verbatim → new verbatim with both locations
 5. Save as `./competition-reports/<slug>-diff-<old-date>-to-<new-date>.md`.
 6. Generate a PDF via `scripts/generate_pdf.py`.
-7. Report file paths back. Do not summarize the diff.
+7. **Render the full diff report directly in chat.** After the report, add a footer with saved file paths.
 
 Neutrality rules apply: describe changes structurally, do not characterize whether a change is good or bad for the founder.

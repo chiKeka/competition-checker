@@ -187,3 +187,16 @@ Examples: "T&Cs fetched from linked PDF at URL X." "Sections 1–4 analyzed; sec
 - Dimension sections always appear in numerical order 1–7, even if a dimension scored 0 (write the section with a single line: "No relevant clauses identified.").
 - If a dimension scored 0, the findings list for that dimension is empty (no bullets). The section header and the one-line headline still appear.
 - The closing italic line (`*This report surfaces facts…*`) is mandatory — it is the structural reminder that this is not advice.
+
+## Rendering
+
+The report is rendered in **two places**:
+1. **Chat interface** (primary) — the full markdown report is output directly in the conversation so the founder reads it immediately. This is the main reading experience.
+2. **Saved files** (archival) — markdown, JSON sidecar, and PDF are written to `./competition-reports/` for diffing, watching, and offline reference.
+
+After the in-chat report, append a brief footer:
+```
+---
+Saved to: `./competition-reports/<slug>-<date>.md`
+PDF: `./competition-reports/<slug>-<date>.pdf` (or "skipped — [reason]")
+```

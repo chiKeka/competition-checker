@@ -14,6 +14,6 @@ Follow the skill's workflow exactly:
 4. Classify clauses across all 7 dimensions per `RUBRIC.md`.
 5. Emit the scorecard exactly per `OUTPUT.md` — no extra sections, no summary.
 6. Save markdown, JSON sidecar, and run `scripts/generate_pdf.py` to produce the PDF.
-7. Report back with file paths only. Do not restate findings.
+7. **Render the full report directly in chat** so the founder reads it immediately. After the report, add a footer with saved file paths.
 
 Neutrality is mandatory: no prescriptive language anywhere in the output.

@@ -114,12 +114,13 @@ python3 scripts/generate_pdf.py <markdown-path> <pdf-path>
 ```
 The script path is relative to the plugin root. If the user hasn't installed the deps, the script will print install instructions — surface those to the user and skip PDF generation for this run. Do not fail the whole workflow if PDF generation fails; markdown + JSON are still useful.
 
-### 9. Report back
-Tell the user:
-- Path to the markdown file
+### 9. Surface the report in chat
+**Always render the full markdown report directly in the chat interface.** The founder should see the scorecard, findings, fit analysis, and ROI factors without opening a file. After the rendered report, add a brief footer with:
+- Path to the saved markdown file
 - Path to the PDF (or note if skipped)
 - If a prior check existed: one sentence noting that a diff section is included
-- Nothing else. No summary of findings. The report is the report.
+
+The saved files are for archival and diffing. The chat is the primary reading experience.
 
 ## JSON sidecar schema
 

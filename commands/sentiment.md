@@ -15,6 +15,6 @@ Save outputs:
 - `./competition-reports/<slug>-sentiment-<YYYY-MM-DD>.md`
 - `./competition-reports/<slug>-sentiment-<YYYY-MM-DD>.pdf` (via `scripts/generate_pdf.py`)
 
-Report file paths only. Do not summarize the findings.
+**Render the full sentiment report directly in chat.** After the report, add a footer with saved file paths.
 
 Neutrality rules apply: no sentiment score, no characterization of organizer intent, no "apply / don't apply" implication.
