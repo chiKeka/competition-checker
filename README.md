@@ -78,6 +78,42 @@ Profile stays local. Override any field per-check with flags like `--stage funde
 
 Reports render in chat and are saved to `./competition-reports/` in your current working directory.
 
+## See it in action
+
+Here's a real check run on **Perplexity's "Billion Dollar Build"** — a $1M seed investment competition announced April 2026. The T&Cs were embedded in a sandboxed iframe that blocked programmatic access; the tool fell back to vision extraction and web-search corroboration automatically.
+
+### Scorecard
+
+| # | Dimension | Score | Headline |
+|---|-----------|:-----:|----------|
+| 1 | IP & Ownership         | 7? | Worldwide royalty-free promotional license covering code, concepts, workflows, and founder likenesses; no restriction on sponsor building competing products |
+| 2 | Equity & Financial     | 7 | Investment framed as prize but is not a prize; requires Delaware C-Corp incorporation; acceptance of equity terms is a condition of receiving funds |
+| 3 | Exclusivity & Restraint| 4? | Mandatory use of Perplexity Computer platform during competition; no explicit non-compete or fundraising freeze identified |
+| 4 | Publicity & Data       | 8 | Perpetual royalty-free license over founder likenesses, demos, and company name for marketing; full access to all participant queries and workflow data during competition |
+| 5 | Commitment Cost        | 5 | 8-week commitment; live-streamed pitch event; all participant costs unreimbursed unless separate written agreement |
+| 6 | Jurisdiction & Disputes| 6? | Class action waiver; indemnification obligations on entrant; sponsor may disqualify at sole discretion |
+| 7 | Prize Mechanics        | 8 | Investment at sponsor's sole discretion (zero to three+ winners); credits at Perplexity's discretion; no obligation to invest in any participant |
+
+### What the tool caught
+
+Every flag includes the verbatim clause and a location reference. Some highlights:
+
+> *"does not restrict Perplexity, Perplexity Fund, or their affiliates from independently developing, creating, investing in, or pursuing products, services, companies, or ideas similar to or competitive with any submission."*
+
+> *"a worldwide, royalty-free promotional licence to use their company name, product, code, concepts, workflows, founder likenesses and demo footage for marketing, investor relations, and other commercial purposes without further consent or compensation."*
+
+> *"retains the right to access and review all Perplexity Computer queries, prompts, task outputs, workflow data and related account activity of registered participants during the competition period."*
+
+> *"Perplexity Fund is under no obligation to invest in any participant."*
+
+The tool flagged this as structurally unusual: the investment is explicitly "not a prize, grant, or gift" while being positioned as the headline reward. The founder competes for 8 weeks for an offer whose equity terms they cannot evaluate until after winning.
+
+No verdict. No "don't apply." Just the clauses, the scores, and the structural notes. You decide.
+
+[Full report →](competition-reports/examples/the-billion-dollar-build-2026-04-12.md)
+
+---
+
 ## Neutrality guarantee
 
 The skill is instructed — structurally — never to prescribe. It will not say "aggressive," "concerning," "unacceptable," "you should," "we recommend," or equivalent. Neutral descriptors like "broader than typical" or "perpetual term" are allowed. The negotiation context section surfaces landscape facts and public reports — it never says "negotiate this." The scorecard surfaces facts; you decide.
