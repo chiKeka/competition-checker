@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chmod +x \"/Users/keka/Desktop/Competition checker/scripts/generate_pdf.py\")",
+      "Bash(chmod +x:*)",
+      "Bash(python3 \"/Users/keka/Desktop/Competition:*)",
+      "Bash(python3 -c ':*)",
+      "WebFetch(domain:www.perplexity.ai)",
+      "Skill(browse)",
+      "WebSearch",
+      "WebFetch(domain:www.businesstoday.in)",
+      "WebFetch(domain:www.newsbytesapp.com)",
+      "WebFetch(domain:www.freeaitoolspro.com)",
+      "Bash(python3 scripts/fingerprint.py sidecar competition-reports/history/the-billion-dollar-build-2026-04-12.json)",
+      "Bash(python3 scripts/generate_pdf.py competition-reports/the-billion-dollar-build-2026-04-12.md competition-reports/the-billion-dollar-build-2026-04-12.pdf)"
+    ]
+  }
+}

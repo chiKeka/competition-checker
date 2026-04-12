@@ -1,0 +1,14 @@
+{
+  "name": "competition-checker",
+  "version": "0.1.0",
+  "description": "Analyze startup competition terms & conditions. Evidence-first, neutral scorecard across 7 founder-calibrated dimensions. Input-agnostic (URL, PDF, screenshot, text). Produces markdown + JSON + PDF. Tracks diffs over time.",
+  "keywords": [
+    "startup",
+    "competition",
+    "legal-review",
+    "terms-and-conditions",
+    "founder-tools",
+    "community-signal",
+    "sentiment"
+  ]
+}
