@@ -2,6 +2,13 @@
   "name": "competition-checker",
   "version": "0.1.0",
   "description": "Analyze startup competition terms & conditions. Evidence-first, neutral scorecard across 7 founder-calibrated dimensions. Flags what T&Cs say AND what they don't say. Investment-term deep dive (SAFE/convertible notes). Negotiation context with landscape comparison. Cross-competition side-by-side comparison. Founder-personalized fit and ROI analysis. Input-agnostic (URL, PDF, screenshot, text).",
+  "author": {
+    "name": "Bruno Chikeka",
+    "url": "https://github.com/chiKeka"
+  },
+  "homepage": "https://github.com/chiKeka/competition-checker",
+  "repository": "https://github.com/chiKeka/competition-checker",
+  "license": "MIT",
   "keywords": [
     "startup",
     "competition",

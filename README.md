@@ -1,5 +1,7 @@
 # Competition Checker
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A Claude Code plugin for founders. Reviews startup competition T&Cs and produces a neutral, evidence-first scorecard across 7 founder-calibrated dimensions. You decide whether to apply.
 
 ## What it does
@@ -68,13 +70,27 @@ Profile stays local. Override any field per-check with flags like `--stage funde
 
 ## Install
 
-1. Clone or copy this directory into your Claude Code plugins location.
+**Via Claude Code plugin marketplace** (recommended):
+
+```
+/plugin install chiKeka/competition-checker
+```
+
+**Manual install:**
+
+1. Clone this repo into your Claude Code plugins directory, or add it as a local plugin source.
 2. Install the PDF generator's Python deps:
    ```
    pip install -r scripts/requirements.txt
    ```
    (Requires Python 3.9+. WeasyPrint pulls in cairo/pango — on macOS: `brew install pango`.)
 3. Restart Claude Code. Run `/check <competition-url>` in any workspace.
+
+## Requirements
+
+- Claude Code (latest)
+- Python 3.9+ (for PDF report generation)
+- Optional: `pango`/`cairo` system libs for WeasyPrint
 
 Reports render in chat and are saved to `./competition-reports/` in your current working directory.
 
@@ -117,3 +133,11 @@ No verdict. No "don't apply." Just the clauses, the scores, and the structural n
 ## Neutrality guarantee
 
 The skill is instructed — structurally — never to prescribe. It will not say "aggressive," "concerning," "unacceptable," "you should," "we recommend," or equivalent. Neutral descriptors like "broader than typical" or "perpetual term" are allowed. The negotiation context section surfaces landscape facts and public reports — it never says "negotiate this." The scorecard surfaces facts; you decide.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
+
+## Author
+
+Bruno Chikeka — [github.com/chiKeka](https://github.com/chiKeka)
